@@ -1,0 +1,10 @@
+Pivot sprite notes, from top down:
+
+Helmet is shiny and metalic, thus reflective.
+Body armor is matt and clothy.
+Arms are dark metal and cloth.
+Gauntlet wrists are metalic and NOT shiny.
+Gauntlet backs are metal.
+Gloves and belt are cloth.
+Upper legs dark grey cloth, and are dithered. However, dithering is low priority.
+Legs and shoes are metal.
