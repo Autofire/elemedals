@@ -1,5 +1,5 @@
-*.cfg text=lf
-*.md text=auto
+*.cfg text eol=lf
+*.md text eol=auto
 
 *.png binary
 *.xcf binary
