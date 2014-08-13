@@ -1,0 +1,17 @@
+This is for various bits of code which are helpful for reference.
+
+
+From frogatto_playable.cfg
+
+103-110:
+	/*tracking key presses: we can accomplish mouseup, mousedown, and mouse-held by doing the following:
+By setting the cycle on which a key is pressed, we limit ourselves to a set of keys that need to be re-checked on later frames to see if they're still held down. We don't need to register key-tracking up-front, as having an access of ctrl_keyboard in on_process will make this implicit (though any gap of more than one cycle in on_process tracking will break continuity of key-holds).
+On the first frame, we set the current cycle a key has been pressed at. We leave this alone if the key continues being pressed (which allows us to know how long it's been pressed), or if a key is released, we null this out. */
+_key_store: { type: "{string -> int|null}", default: {} },
+track_key: "def(string key_name) ->commands if(key_name in ctrl_keys, if(not key_name in _key_store, add(_key_store, {(key_name) -> cycle})), set(_key_store[key_name], null))",
+ctrl_keyboard: "def(string key_name) ->int|null if(key_name in _key_store, (cycle - (int <- _key_store[key_name])), null )",
+
+...
+
+764 track_key('i'),
+765 if(ctrl_keyboard('i') = 1, suspend_level('inventory-screen.cfg') ),
