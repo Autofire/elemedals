@@ -53,5 +53,25 @@ I: I also suggest you try the *up* and *down
    arrow keys*. Hold them down for a couple of
    seconds, too!
 
-<Upon encountering the first monster>
-If you
+<Upon encountering the first monster, ends if the monster is defeated>
+I: Ah, a Scuttlebot. Ready your sword!
+P: My sword?
+I: Yes, your sword. You brought it, right?
+P: Um...yes, I did!
+I: Great! Use the *s* key to swing your weapon.
+   Try tapping the *s* key rapidly for
+   a combo.
+
+<Upon encountering the Gunpuppies accross the gap>
+P: Darn it. How do I get accross?
+I: It looks like you could dispatch those
+   Gunpuppies, on the other side of the chasm.
+   You've brought your gun, right?
+P: Yes, it's right here.
+I: Ok. Switch with the *d* key, which will
+   cycle your equipped weapon. (Keep an eye on
+   the *something* corner of the screen.
+I: It shows which weapon you have in your hand.)
+
+
+   
