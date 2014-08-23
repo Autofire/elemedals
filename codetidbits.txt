@@ -15,3 +15,6 @@ ctrl_keyboard: "def(string key_name) ->int|null if(key_name in _key_store, (cycl
 
 764 track_key('i'),
 765 if(ctrl_keyboard('i') = 1, suspend_level('inventory-screen.cfg') ),
+
+finding a particular thing:
+choose(filter(level.chars, value is obj chroma_norm), value.hitpoints)
