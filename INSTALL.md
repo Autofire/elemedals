@@ -1,4 +1,8 @@
 Elemedals Install
 =================
 
-Right now, you will need the latest version of Anura. If you can get Anura compiled, you shouldn't need this. Right now, this is a placeholder, and will get changed once the first demo is released.
+If you're on Windows, you're on your own. Chances are, you cannot compile Anura. Just wait until an installer is available. (Which will be soon!)
+
+If you run on Linux, you'll have to compile the Anura engine. (https://github.com/anura-engine/anura) Note that this will *probably* get fixed soon. Frogatto's binaries should be coming around the corner soon.
+
+If you run Mac, I assume you can also compile the Anura engine. Haven't tested it.
