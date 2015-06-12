@@ -1,0 +1,191 @@
+{
+	"air_resistance": 20,
+	"auto_move_camera": [0,0],
+	"background": "black",
+	"background_offset": [0,0],
+	"camera": {
+		"position": [0.0,0.0,10.0]
+	},
+	"character": [
+		{
+			"_addr": "0x2a955c0",
+			"current_frame": "normal",
+			"custom": 1,
+			"face_right": 0,
+			"label": "_2f500ab2",
+			"type": "chroma_norm",
+			"x": 672,
+			"y": 352
+		},
+		{
+			"_addr": "0x2a960b0",
+			"current_frame": "normal",
+			"custom": 1,
+			"face_right": 0,
+			"label": "_7f78b4a1",
+			"type": "gunpup_norm",
+			"x": 975,
+			"y": 269
+		},
+		{
+			"_addr": "0x2a96ba0",
+			"current_frame": "normal",
+			"custom": 1,
+			"face_right": 0,
+			"label": "_6b32ce8e",
+			"type": "chroma_norm",
+			"x": 1760,
+			"y": 365
+		},
+		{
+			"_addr": "0x2a97690",
+			"current_frame": "normal",
+			"custom": 1,
+			"face_right": 0,
+			"label": "_2cbd6361",
+			"type": "gunpup_norm",
+			"x": 1664,
+			"y": 365
+		},
+		{
+			"_addr": "0x2a98520",
+			"current_frame": "normal",
+			"custom": 1,
+			"label": "_768d1e25",
+			"type": "chroma_norm",
+			"x": 1344,
+			"y": 352
+		},
+		{
+			"_addr": "0x2a993b0",
+			"current_frame": "normal",
+			"custom": 1,
+			"is_human": 1,
+			"label": "_12c1a129",
+			"objects_destroyed": {
+				"level": "titlescreen.cfg",
+				"objects": []
+			},
+			"type": "pivot_playable",
+			"x": -224,
+			"y": 288
+		}
+	],
+	"dimensions": [-320,-32,1919,599],
+	"id": "titlescreen.cfg",
+	"music": "",
+	"preloads": "",
+	"segment_height": 0,
+	"segment_width": 0,
+	"serialized_objects": {
+		"character": []
+	},
+	"set_screen_resolution_on_entry": 0,
+	"tile_map": [
+		{
+			"tiles": ",
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dbk,dbk
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dbk,dbk
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dbk,dbk
+,,,,,,,,,,,clw,clw,clw,clw,clw,clw,clw,clw,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dbk,dbk
+,,,,,,,,,,,clw,clw,clw,clw,clw,clw,clw,clw,,,,clw,clw,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dbk,dbk
+,,,,,,,,,,,clw,clw,clw,clw,clw,clw,clw,clw,,,,clw,clw,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dbk,dbk
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dbk,dbk
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dbk,dbk
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dbk,dbk
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dbk,dbk
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dbk,dbk,dbk,dbk,dbk,dbk,dbk,,,,,,,,,,,,,,,,,,,,,,dbk,dbk
+dbk,dbk,dbk,dbk,dbk,dbk,dbk,,,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,,,,,,,,,,,,,,,,,,dbk,dbk,dbk,dbk,dbk,dbk,dbk,,,,,,,,,,,,,,,,,,,,,,dbk,dbk
+dbk,dbk,dbk,dbk,dbk,dbk,dbk,,,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,,,,,,,,,,,,,,,,,,dbk,dbk,dbk,dbk,dbk,dbk,dbk,,,,,,,,,,,,,,,,,,,,,,dbk,dbk
+dbk,dbk,dbk,dbk,dbk,dbk,dbk,,,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,,,,,,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk
+dbk,dbk,dbk,dbk,dbk,dbk,dbk,,,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,,,,,,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk
+dbk,dbk,dbk,dbk,dbk,dbk,dbk,,,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,,,,,,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk
+dbk,dbk,dbk,dbk,dbk,dbk,dbk,,,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,,,,,,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk
+dbk,dbk,dbk,dbk,dbk,dbk,dbk,,,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,clw,,,,,,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk
+dbk,dbk,dbk,dbk,dbk,dbk,dbk,,,,,,,,,,,,,,,,,,,,,,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk,dbk
+,",
+			"unique_tiles": ",clw,dbk",
+			"variations": "",
+			"x": -320,
+			"x_speed": 100,
+			"y": -384,
+			"y_speed": 100,
+			"zorder": "interior_solid_ground_tiles"
+		},
+		{
+			"tiles": ",
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,",
+			"unique_tiles": "",
+			"variations": "",
+			"x": 0,
+			"x_speed": 100,
+			"y": 0,
+			"y_speed": 100,
+			"zorder": "player"
+		},
+		{
+			"tiles": ",
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,",
+			"unique_tiles": "",
+			"variations": "",
+			"x": 0,
+			"x_speed": 100,
+			"y": 0,
+			"y_speed": 100,
+			"zorder": 5
+		}
+	],
+	"title": "",
+	"touch_controls": 1,
+	"vars": {
+	},
+	"version": "1.4",
+	"water_resistance": 100,
+	"xscale": 100,
+	"yscale": 100
+}
