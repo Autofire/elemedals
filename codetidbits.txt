@@ -18,3 +18,42 @@ ctrl_keyboard: "def(string key_name) ->int|null if(key_name in _key_store, (cycl
 
 finding a particular thing:
 choose(filter(level.chars, value is obj chroma_norm), value.hitpoints)
+
+...
+
+Monday,  1 June 2015 06:22:51 AM
+Autofire-Deb: How does the frogatto playable load the gui object?
+(https://github.com/frogatto/frogatto/blob/master/data/objects/playable/frogatto_playable.cfg#L499)
+I have similar lines in my character, but it tells me that it cannot find the
+object. I will mention that I do not have the exact same path structure that
+frogatto has, but I'm not very sure if that would be the cause.
+Autofire-Deb: Actually I guess I should be linking to my project...but I don't
+have this latest version on github atm.
+Autofire-Deb: Well, here's the module. (https://github.com/Autofire/elemedals)
+I assume I won't get any answers for a while, so I'll just leave the client
+open
+
+Monday,  1 June 2015 07:30:30 AM
+Jetrel_: Autofire-Deb:  yeah, I'm gonna need a source link to that to help.
+Commit early, commit often.
+Jetrel_: Autofire-Deb:  basically what you see in those lines above is all
+there is for "loading code".  There's no special path magic; as long as
+something's in the data/objects folder, it can be referred to by name.
+Jetrel_: Autofire-Deb:  all those loading commands there are doing, is just
+that they trigger when a new copy of "frogatto the character object" is
+created (i.e. when the player dies and respawns, and/or when the game is
+loaded).
+Jetrel_: Upon triggering, in frogatto-the-object's memory storage, they create
+these new objects (which in turn automatically makes them run whatever
+initialization code they've got, just by being created).
+Jetrel_: This _doesn't_ put these in the game, though - they have to manually
+be attached to the actual, running game, by `add_object()`.
+Jetrel_: (hint:  creating an object like this via `object()`, and then
+attaching it via `add_object()` is longhand for what `spawn()` does.   You use
+the longhand if you need to save a reference to it so you can change things
+about it later.)
+Jetrel_: It's in `set_up_gui()`, right below there on line 533, that we attach
+all those objects.
+Jetrel_: (note also:  `remove_object()` will detach objects, and yeah, it's
+also possible (just more roundabout) to grab a reference to something created
+with `spawn()`.)
