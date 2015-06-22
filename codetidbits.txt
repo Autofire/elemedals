@@ -57,3 +57,63 @@ all those objects.
 Jetrel_: (note also:  `remove_object()` will detach objects, and yeah, it's
 also possible (just more roundabout) to grab a reference to something created
 with `spawn()`.)
+
+...
+
+Autofire-Deb:  Jetrel_:
+https://github.com/Autofire/elemedals/blob/master/data/gui/components/heart_display.cfg
+Autofire-Deb:  Slightly different folder architechture
+Autofire-Deb:  Although I will rework things, maybe I should have started with
+something more like Frogatto's
+Jetrel_:  Autofire-Deb:  it needs to be inside objects
+Jetrel_:  Autofire-Deb:  essentially the idea is...  previously our engine had
+this baked-in notion of "gui components" - where they were a special, separate
+thing with special support from the engine
+Autofire-Deb:  Jetrel_: I thought I had mine in an object...but I'll let you
+finish.
+Jetrel_:  Autofire-Deb:  our data folder is segregated according to engine
+support - you can NOT put things that have different kinds of engine support
+in each others folders.  Objects, for example WILL NOT be found unless they're
+inside the objects folder.
+Jetrel_:  Levels will not be found unless they're in the levels folder, etc.
+Jetrel_:  So - the gui folder was only for the old-style "gui components"
+which had special engine support.
+Jetrel_:  Autofire-Deb:  essentially under the new version of the engine, you
+shouldn't have anything in data/gui as a top-level folder; it's going away.
+Jetrel_:  So yes, you had yours in an object.  But it will not get loaded or
+noticed unless it's in the objects folder somewhere - it's absolutely
+mandatory.
+Jetrel_:  So anyways - previously our engine had this idea of "gui components"
+being a special feature - now, we're just doing HUD stuff and everything we
+used to do with "gui components" as mere objects.
+Autofire-Deb:  Jetrel_: Oh. Well, that explains things. I used to think that
+you could put things anywhere and have it work. Has Anura always been set up
+the way you just explained? (I assume the current system creates a good boost
+in performance, yes?)
+Jetrel_:  Autofire-Deb:  always.
+Jetrel_:  You're free to use whatever folder structure you want _inside_ the
+primary containers (objects, object_prototypes, fonts, level), but those
+top-level folders are built into the engine.
+Autofire-Deb:  Jetrel_: Makes sense. So it's just those four?
+Jetrel_:  No.
+Jetrel_:  It's ALL of the top level folders in data.  ALL OF THEM.
+Autofire-Deb:  Oh, wait, right. If Frogatto has it, it's probably one of them.
+:P
+Autofire-Deb:  Wasn't thinking
+Jetrel_:  backgrounds, classes, editor, fonts-bitmap, gui, level
+object_prototypes, objects, shaders, tiles
+Jetrel_:  And there may be more, actually - Argentum Age may use a few we
+don't.
+Autofire-Deb:  Never heard of it. *Googles it*
+Jetrel_:  Autofire-Deb:  citadel's new name
+Autofire-Deb:  Oh, okay. Gotcha
+Jetrel_:  Their presence is optional if there's nothing you have to put in
+them, but if you do want whatever's in them to be noticed, their naming is
+mandatory
+Autofire-Deb:  Mind if I save this discussion for my records? I don't want to
+forget this stuff.
+Autofire-Deb:  Oh, also, just to add to the list, Argentum Age contains
+db_scripts, fonts, tbs_test
+Autofire-Deb:  If someone wanted to be abritrary, I suppose you could use both
+fonts and fonts-bitmap
+Autofire-Deb:  *in the same module
