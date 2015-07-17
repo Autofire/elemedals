@@ -117,3 +117,34 @@ db_scripts, fonts, tbs_test
 Autofire-Deb:  If someone wanted to be abritrary, I suppose you could use both
 fonts and fonts-bitmap
 Autofire-Deb:  *in the same module
+
+...
+
+[10:39] <Autofire-Win8> How does one reference user-defined variables using level.player? I can easily do level.player.hitpoints but not level.player.totalpower (a variable of my own.)
+[10:40] <Jetrel_> Autofire-Win8:  you need to declare that the level.player object is of the desired type.
+[10:40] <Jetrel_> Autofire-Win8:  there are multiple ways to do this
+[10:41] <Jetrel_> Autofire-Win8:  by _default_, it's going to assume that level.player is just a custom_obj, and it'll assume any other variable names not found in custom_obj are illegitimate.
+[10:41] <Jetrel_> (custom_obj, btw, is how a generic "custom object" is declared in a type signature, in case you care.  Can be useful)
+[10:42] <Jetrel_> Autofire-Win8:  so here are ways to do it:
+[10:43] <Jetrel_> 1] locally typecast it.  2] make a local reference that's got a specialized type (you'll still probably have to typecast when filling this)  3] globally declare that all "level.player" objects in your game are of a certain type.
+[10:43] <Jetrel_> Number 3 can be done in your module.cfg
+[10:44] <Jetrel_> Autofire-Win8:  on line 10, we say here that any "level.player" inside frogatto is of the type "obj player_controlled":  https://github.com/frogatto/frogatto/blob/master/module.cfg
+[10:45] <Jetrel_> Autofire-Win8:  when you use a prototype as a type name, it means anything that's a child of that prototype qualifies (but it's only going to have access to the variables up in the prototype, not down in the subclass)
+[10:45] <Jetrel_> Autofire-Win8:  we chose to do this in frogatto because we do alternate objects for cutscenes and stuff that aren't frogatto_playable
+[10:45] <Jetrel_> Autofire-Win8:  you may find it totally reasonable to have it just directly be your player type.
+[10:46] <Autofire-Win8> Jetrel_: Aaah, I see. So if I were just to place my player object there, would then everything work?
+[10:46] <Jetrel_> If you do that, then across your entire game, it'll see any "level.player" as your player type and recognize all the variable names inside it.
+[10:46] <Jetrel_> Yup!
+[10:47] <Autofire-Win8> Jetrel_: While there is a slight chance that this may indeed cause a problem, as long as I can detach the camara from the player temporarily and pan it somewhere else, I should be good.
+[10:47] <Jetrel_> Although you don't want to do this, another solution is to manually typecast each and every instance.  This sucks twofold:  firstly, it means you have all the manual copypasta.  Secondly, though, it means it goes from a launch-time error, to being a runtime error.
+[10:48] <Jetrel_> Meaning instead of noticing it immediately when you fire the game up, it'll instead fail to notice the bug until you manually get to a point in the game where it tries to use the formula in question
+[10:48] <Autofire-Win8> Ouch...in my experience of the past few days, runtime errors are harder to clean up than launch errors
+[10:48] <Jetrel_> BINGO.
+[10:48] <Jetrel_> Yes!  A thousand times, yes!
+[10:48] <Maketwo> Jetrel_: Just for you: http://xob.kapsi.fi/~makegho/trash/olemassaolemattomuus.wav http://xob.kapsi.fi/~makegho/trash/ainutlaatuisuuksistammeko.wav
+[10:49] <Jetrel_> Whenever possible you do want to lean towards having launch-time errors rather than runtime.
+[10:50] <Autofire-Win8> Jetrel_: For now, then, I think I'll just set my player object as the player_type. If I ever run into problems (i.e. I want to change to some dummy player object which causes things to go wrong), I can then just move those general variables to some prototype and make all my playable objects refer to that.
+[10:50] <Jetrel_> Autofire-Win8:  you don't want to use it for this, but it can be useful for other things in a pinch;  typecasting in frogatto is done like this:
+[10:51] <Jetrel_> level.player.attack_counter
+[10:51] <Jetrel_> (obj frogatto_playable <- level.player).attack_counter
+[10:51] <Jetrel_> Autofire-Win8:  that plan of yours is basically perfect. :)
