@@ -16,6 +16,8 @@ ctrl_keyboard: "def(string key_name) ->int|null if(key_name in _key_store, (cycl
 764 track_key('i'),
 765 if(ctrl_keyboard('i') = 1, suspend_level('inventory-screen.cfg') ),
 
+...
+
 finding a particular thing:
 choose(filter(level.chars, value is obj chroma_norm), value.hitpoints)
 
@@ -117,3 +119,7 @@ db_scripts, fonts, tbs_test
 Autofire-Deb:  If someone wanted to be abritrary, I suppose you could use both
 fonts and fonts-bitmap
 Autofire-Deb:  *in the same module
+
+...
+
+Alucardlegolas as a secret code. Don't forget it!
