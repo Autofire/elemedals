@@ -152,3 +152,5 @@ Alucardlegolas as a secret code. Don't forget it!
 [10:51] <Jetrel_> level.player.attack_counter
 [10:51] <Jetrel_> (obj frogatto_playable <- level.player).attack_counter
 [10:51] <Jetrel_> Autofire-Win8:  that plan of yours is basically perfect. :)
+
+Fix for i in `grep -rl 'elem_hittable'`; do sed -s s/elem_hittable/hittable/g $i > tmp; mv tmp $i; done
