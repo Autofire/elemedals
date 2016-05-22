@@ -11,11 +11,15 @@
 # string and a replace string, and apply them in a similar way as above. Then
 # it will continue asking until a blank line is given.
 
-function SearchAndReplaceInFiles {
-	PATH_EXPR="*object*"
-	NAME_EXPR="*.cfg"
+NAME_EXPR="*.cfg"
+PATH_EXPR="*object*"
 
-	for i in `find . -name "*.cfg" -path "*object*"`
+ SEARCH_STR_PROMPT="Enter the string you want to match (blank to exit): "
+REPLACE_STR_PROMPT="Enter the string you want to replace it with:       "
+
+function SearchAndReplaceInFiles {
+
+	for i in `find . -name "$NAME_EXPR" -path "$PATH_EXPR"`
 	do
 		sed -s "s/$1/$2/g" $i > tmp;
 		mv tmp $i;
@@ -26,16 +30,16 @@ if [ $# -eq 2 ] ; then
 	SearchAndReplaceInFiles $1 $2
 
 else
-	echo -e "Enter the string you want to match (blank to exit): "
+	echo -n "$SEARCH_STR_PROMPT"
 	read find
 	
-	while [ find != "" ]; do
-		echo -e "Enter the string you want to replace it with:       "
+	while [ -n $find ]; do
+		echo -n "$REPLACE_STR_PROMPT"
 		read replace
 
-		SearchAndReplaceInFiles find replace
+		SearchAndReplaceInFiles $find $replace
 
-		echo -e "Enter the string you want to match (blank to exit): "
+		echo -en "\n$SEARCH_STR_PROMPT"
 		read find
 	done
 fi
