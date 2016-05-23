@@ -81,7 +81,7 @@
 		attack_area: [10, 2,40,29],
 		frames: 4,
 		pad: 3,
-		duration: 4,
+		duration: 3,
 		accel_y: 80,
 		accel_x: 0
 	},
