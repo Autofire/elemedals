@@ -5,9 +5,9 @@ This is the style guide for the code of Elemedals. Not all objects may conform t
 
 | Type        | Example              | Explanation																																								|
 | ----------- | -------------------- | ------------------------------------------------------------------------------------------ |
-| Constant		| `cCONST_NAME`				 | Start it with a c, and make the rest of the name all caps with underscores.								|
-| Void Consts | `vCONST_NAME`				 | Like above, but with a v. (These are properties which only do commands and return nothing)	|
-| Temp Consts | `tCONST_NAME`				 | LIke above, but with a t. (These are for `where` statements and things like map())					|
+| Constant		| `c_constName`				 | Start it with a c, and make the rest of the name all caps with underscores.								|
+| Void Consts | `ConstName`				 | Would be styled like a function, just without the parens. |
+| Temp Consts | `t_constName`				 | LIke above, but with a t. (These are for `where` statements and things like map())					|
 | Variable		| `variableName`			 | Use camal casing. (First letter is lower)																									|
 | Function		| `FunctionWithPurpose`| Use camal casing. (First letter is upper)																									|
 | Events			| `event_name`				 | Use all lowercase and underscores																													|
