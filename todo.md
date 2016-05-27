@@ -1,6 +1,6 @@
-In the following order:
+Bold is for done. Should be done in the following order:
 
-Make Gun Puppy be able to multi-shot.
+**Make Gun Puppy be able to multi-shot.**
 Fix the Chromalisk's AI.
 Get player charging working. (DO NOT CREATE PLAYER'S SPIN YET.)
 Make player's gun work. (NO ANIMATIONS)
