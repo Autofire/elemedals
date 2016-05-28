@@ -1,0 +1,24 @@
+[
+
+[~Elemedals uses the module servers
+that the Frogatto team has set up.
+Whenever the game is started, Elemedals
+will check these servers for a new version.
+If it finds a newer version, and you have
+<em>not</em> downloaded the game via Github,
+Elemedals will automatically update itself.
+If you don't want the game doing this,
+you may turn it off.
+Locate the <em>master-config.cfg</em> file in the
+same folder than <em>anura.exe</em> is located in.
+Open <em>master-config.cfg</em> in some text editor,
+and change the line that ends in
+...<em>"module=elemedals"]</em> to
+<em>arguments: ["--module=elemedals"]</em>
+NOTE: Other than Github, the auto-updating
+will be the only way to get recent versions
+of the game. If you'd rather be able to
+handle updates yourself, I suggest you install
+the game using Github.~]
+
+]
