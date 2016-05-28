@@ -1,6 +1,7 @@
 [
 
-[~Elemedals uses the module servers
+[~<em>NOTE: This doesn't work on Windows yet!</em>
+Elemedals uses the module servers
 that the Frogatto team has set up.
 Whenever the game is started, Elemedals
 will check these servers for a new version.
