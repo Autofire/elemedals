@@ -1,12 +1,12 @@
 {
 	'calibur':
 	{
-		normal_damage:    [5, 5, 8],
-		pierce_damage:    [0, 0, 0],
-		elemental_damage: [0, 0, 0],
-		shadow_damage:    [0, 0, 0],
+		normal_damage:    [ 5, 5, 8],
+		pierce_damage:    [ 0, 0, 0],
+		elemental_damage: [ 0, 0, 0],
+		shadow_damage:    [ 0, 0, 0],
 		sound_effect_dir: 'none',
-		charged_attack:   null
+		charge_time:	  50
 	}
 }
 
